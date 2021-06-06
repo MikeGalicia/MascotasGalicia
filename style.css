@@ -72,14 +72,14 @@ section {
   left: 80px;
 }
 
-.Index__calendario {
+/* .Index__calendario {
   /* position: absolute;
   top: 240px;
   margin: 0px; */
   /* grid-area: 1/1/5/3; posición en el grid */
   /* grid-template-columns: minmax(200px); */
-  background-color: #020101;
-}
+  /* background-color: #020101;
+} */ */
 
 .Index__title {
   position: absolute;
@@ -112,10 +112,14 @@ section article {
 }
 
 footer {
-  width: 110px;
+  width: 70px;
   position: fixed;
-  top: 100px;
+  bottom: 10px;
   right: 20px;
+}
+
+footer div {
+  padding: 10px;
 }
 
 /*  flexbox */
@@ -208,15 +212,15 @@ footer {
 
 /* Propiedades Grid!!! */
 
-.Index__grilla {
+/* .Index__grilla {
   display: grid;
   /* grid-template: repeat(8, 12.5%) / 150px 100px repeat(8, 10%);
 
   height: 70vh; */
-  grid-template-columns: 10px auto;
+  /* grid-template-columns: 10px auto;
 
   grid-template-rows: 150px 150px;
-}
+} */ */
 
 .Index__1SeccInf {
   grid-area: 1/4/3/5; /*posición en el grid!!!!!*/
@@ -254,8 +258,19 @@ tr:nth-child(even) {
   list-style-type: square;
 }
 
-.ul_FAQ {
-  font-style: italic;
+.card-header {
+  background-color: rgba(0, 0, 0, 0.849);
+  
+}
+
+.card-header a {
+  color: white;
+}
+
+
+
+.card-body {
+background-color: #f17005;
 }
 
 h1 {

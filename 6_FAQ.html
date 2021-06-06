@@ -5,6 +5,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Desafío Grid</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
+
     <link rel="stylesheet" href="style.css" />
     <link rel="preconnect" href="https://fonts.gstatic.com" />
     <link
@@ -27,58 +31,94 @@
         </ul>
       </nav>
     </header>
-    <div class="div__FAQ">
+
+    <div class="div__FAQ container">
       <h1>Preguntas Frecuentes</h1>
-      <ul class="ul_FAQ">
-        <li>
-          ¿Cómo agendo una cita?
-          <div>
-            Visita nuestra página buscador de sucursales, por el Código Postal
+
+      <div id="accordion">
+        <div class="card">
+          <div class="card-header">
+            <a class="card-link" data-toggle="collapse" href="#collapseOne">
+              ¿Cómo agendo una cita?
+            </a>
+          </div>
+          <div id="collapseOne" class="collapse show" data-parent="#accordion">
+            <div class="card-body">
+              Visita nuestra página buscador de sucursales, por el Código Postal
             para encontrar tu tienda más cercana. Llama para agendar una cita.
+            </div>
           </div>
-          <br />
-        </li>
-        <li>
-          ¿Cuál es el costo del Grooming?
-          <div>Llama a tu sucursal más cercana para información de costos.</div>
-          <br />
-        </li>
-        <li>
-          ¿Qué vacunas requiere para ingresar al Grooming?
-          <div>
-            Solicitamos que todas las mascotas que entran a nuestro Salón estén al
-            día con sus vacunas. Las vacunas requeridas deben administrarse como
-            mínimo 7 días antes de las cita de su mascota. Los requisitos de
-            vacunas varían según el estado. Póngase en contacto con su Salón mas
-            cercano para obtener detalles.
+        </div>
+        <div class="card">
+          <div class="card-header">
+            <a class="collapsed card-link" data-toggle="collapse" href="#collapseTwo">
+              ¿Cuál es el costo del Grooming?
+          </a>
           </div>
-          <div></div>
-        </li>
-        <li>
-          ¿Es posible que lleve más tiempo el baño si mi perro es tamaño colosal?
-          <div>
-            Por supuesto, dependiendo la colosidad de su mascota puede afectar
-            directamente el tiempo de atención a su mascota
+          <div id="collapseTwo" class="collapse" data-parent="#accordion">
+            <div class="card-body">
+              Llama a tu sucursal más cercana para información de costos.
+            </div>
           </div>
-          <br />
-        </li>
-        <li>
-          ¿Que hago si no me gustó el servicio?
-          <div>
-            Es imposible que esto suceda, tenemos un servicio de primera calidad
-            que hará sonreir a su orejón
+        </div>
+
+        <div class="card">
+          <div class="card-header">
+            <a class="collapsed card-link" data-toggle="collapse" href="#collapseThree">
+              ¿Qué vacunas requiere para ingresar al Grooming?
+          </a>
           </div>
-          <br />
-        </li>
-        <li>
-          Y... ¡¿si mi mascota es un gato?!
-          <div>
-            No se preocupe atendemos por igual, no es necesario camuflarlo
+          <div id="collapseThree" class="collapse" data-parent="#accordion">
+            <div class="card-body">
+              Solicitamos que todas las mascotas que entran a nuestro Salón estén al día con sus vacunas. Las vacunas requeridas deben administrarse como mínimo 7 días antes de las cita de su mascota. Los requisitos de vacunas varían según el estado. Póngase en contacto con su Salón mas cercano para obtener detalles.
+            </div>
           </div>
-  
-    </div>
-        <div></div>
-      </li>
-    </ul>
+        </div>
+        <div class="card">
+          <div class="card-header">
+            <a class="collapsed card-link" data-toggle="collapse" href="#collapse4">
+              ¿Es posible que lleve más tiempo el baño si mi perro es tamaño colosal?
+          </a>
+          </div>
+          <div id="collapse4" class="collapse" data-parent="#accordion">
+            <div class="card-body">
+              Por supuesto, dependiendo la colosidad de su mascota puede afectar directamente el tiempo de atención a su mascota
+            </div>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-header">
+            <a class="collapsed card-link" data-toggle="collapse" href="#collapse5">
+              ¿Que hago si no me gustó el servicio?
+          </a>
+          </div>
+          <div id="collapse5" class="collapse" data-parent="#accordion">
+            <div class="card-body">
+              Es imposible que esto suceda, tenemos un servicio de primera calidad que hará sonreir a su orejón
+            </div>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-header">
+            <a class="collapsed card-link" data-toggle="collapse" href="#collapse6">
+              Y... ¡¿si mi mascota es un gato?!
+          </a>
+          </div>
+          <div id="collapse6" class="collapse" data-parent="#accordion">
+            <div class="card-body">
+              No se preocupe atendemos por igual, no es necesario camuflarlo
+            </div>
+          </div>
+        </div>
+
+
+      </div>
+
+
+      
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+ 
   </body>
 </html>
