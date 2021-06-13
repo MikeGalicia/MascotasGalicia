@@ -3,9 +3,13 @@
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Desafío Grid</title>
-    <link rel="stylesheet" href="style.css" />
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <title>SASS+Operaciones+TerceraEntrega</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="./scss/main.css" />
+    <link rel="stylesheet" href="fonts.css">
     <link rel="preconnect" href="https://fonts.gstatic.com" />
     <link
       href="https://fonts.googleapis.com/css2?family=Grandstander:wght@543&family=Montserrat&display=swap"
@@ -13,17 +17,23 @@
     />
   </head>
   <body>
-    <header class="menuPrincipal">
+
+    <header>
+      <div class="menu_bar">
+        <a href="#" class="bt-menu"><span class="icon-menu"></span><img src="./img/logo.png" width="75" class="Index__logo" /> <h1>¡Te cuido tu mascota!</h1>  </a>
+      </div>
+  
       <nav>
         <ul>
-          <li><a href="index.html">Inicio</a></li>
-          <li><a href="2_reservas.html">Reservas</a></li>
-          <li><a href="3_paseos.html">Paseos</a></li>
-          <li><a href="4_baño.html">Baño</a></li>
-          <li><a href="5_conoceme.html">Conóceme</a></li>
-          <li><a href="6_FAQ.html">FAQ</a></li>
-          <li><a href="7_ingresa.html">Ingresa</a></li>
-          <li><a href="8_Registrate.html">Regístrate</a></li>
+          <li><img src="./img/logo.png" width="75" class="Index__logo Index__logo--dis" /></li>
+          <li><a href="index.html"><span class="icon-home"></span>Inicio</a></li>
+          <li><a href="2_reservas.html"><span class="icon-calendar"></span>Reservas</a></li>
+          <li><a href="3_paseos.html"><span class="icon-pacman"></span>Paseos</a></li>
+          <li><a href="4_baño.html"><span class="icon-bug"></span>Baño</a></li>
+          <li><a href="5_conoceme.html"><span class="icon-user-check"></span>Conóceme</a></li>
+          <li><a href="6_FAQ.html"><span class="icon-question"></span>FAQ</a></li>
+          <li><a href="7_ingresa.html"><span class="icon-key"></span>Ingresa</a></li>
+          <li><a href="8_Registrate.html"><span class="icon-profile"></span>Registrate</a></li>
         </ul>
       </nav>
     </header>
@@ -49,5 +59,10 @@
         allowfullscreen
       ></iframe>
     </div>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+<script src="http://code.jquery.com/jquery-latest.js"></script>
+<script src="./menu.js"></script>
   </body>
 </html>

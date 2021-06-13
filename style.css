@@ -4,46 +4,227 @@
 }
 
 body {
-  margin: 50px;
+  margin: 20px; 
   padding: 0;
-  /*font-family: Helvetica, Arial, sans-serif;*/
-
   font-family: "Montserrat", sans-serif;
   color: rgb(253, 253, 253);
   background: #250869b2;
-  font-size: 1.1em;
-  line-height: 2em;
-
   padding-top: 50px; /* margen para que no lo cubra la barra de cabecera*/
 }
 
+
+header {
+	width:100%;
+  right: 0;
+  top: 0;
+  position: fixed; 
+  z-index: 2; 
+}
+
+header nav {
+	width:100%;
+	max-width:100%;
+	margin:0px auto;
+	background:black;
+  height: 80px;
+}
+
+.menu_bar {
+	display:none;
+}
+
+header nav ul {
+	overflow:hidden;
+	list-style:none;
+}
+
+header nav ul li {
+	float:left;
+
+}
+
+header nav ul li a {
+	color:#fff;
+	display:block;
+	text-decoration:none;
+  padding-inline: 15px;
+}
+
+header nav ul li span {
+	margin-right:10px;
+}
+
+header nav ul li a:hover {
+	background: #ec731e;
+}
+
+section {
+	padding:10px;
+}
+
+@media screen and (max-width:1012px ) {
+	header nav {
+		width:80%;
+		height:100%;
+		left:-100%;
+		margin:0;
+		position: fixed;
+    
+	}
+
+	header nav ul li {
+		display:block;
+		float:none;
+    
+		border-bottom:1px solid rgba(255,255,255, .3);
+    
+	}
+
+	.menu_bar {
+		display:block;
+		width:100%;
+		background:#ccc;
+    
+	}
+
+	.menu_bar .bt-menu {
+		display:block;
+		padding:15px;
+		background:black;
+    height: 80px;
+		color:#fff;
+		text-decoration:none;
+		font-weight:normal;
+		font-size:25px;
+		-webkit-box-sizing:border-box;
+		-moz-box-sizing:border-box;
+		box-sizing:border-box;
+	}
+
+  .menu_bar h1 {
+    font-size: 30px;
+    padding: 0px;
+
+  }
+
+	.menu_bar span {
+    
+		float:right;
+		font-size:45px;
+    
+	}
+  .section__titulo {
+    display: none;
+  }
+  .Index__logo--dis {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 590px ){
+  body {
+    
+    background: black;
+    
+  }
+  main {
+    display: none;
+  }
+}
+
+/* 
 .menuPrincipal {
   background: #333;
   color: white;
   height: 80px;
 
-  width: 100%; /* que la barra de menús ocupen tooodo el ancho */
+  width: 100%; /* que la barra de menús ocupen tooodo el ancho 
   right: 0;
   top: 0;
-  position: fixed; /* con esto lo fijamos!!*/
-  z-index: 2; /*Pa que esté arribita de todo :P*/
+  position: fixed; /* con esto lo fijamos!!
+  z-index: 2; /*Pa que esté arribita de todo :P
 }
 .menuPrincipal a {
   color: white;
 }
+ */
+
+/* Código para BEM en index*/
+a:hover {
+	color: white;
+}
+
+.contenedor {
+	max-width: 1000px;
+	width: 90%;
+	margin: 0 auto;
+  
+}
+
+.tarjeta {
+	background-color: rgba(0, 0, 0, 0.425);
+	border-radius: 25px;
+	padding: 20px;
+	display: flex;
+	align-items: center;
+	position: relative;
+	margin-top: 50px;
+  
+}
+
+.tarjeta a:hover {
+  background-color: #ec731e;
+}
+
+.tarjeta__img {
+	width: 300px;
+	height: 180px;
+  border-radius: 15px;
+	margin-right: 30px;
+}
+
+.tarjeta__titulo {
+	font-size:1.5rem;
+	margin-bottom: 20px;
+}
+
+.tarjeta__parrafo {
+	line-height: 28px;
+	font-size:1rem;
+}
+
+.boton{
+	height: 50px;
+	padding: 10px;
+  border-radius: 20px;
+	background-color: black;
+	color: white;
+	display: inline-block;
+	text-decoration: none;
+}
+
+.boton--derecha {
+	position: absolute;
+	right: 20px;
+	bottom: -30px;
+}
+
+
+
+/*fin de código para BEM en index*/
 
 /*
  Propiedades del texto de barrita de navegación 
  */
 nav {
-  float: left;
+  float: center;
 }
 nav ul {
   margin: 0;
   padding: 0;
   font-family: "Grandstander", cursive;
   list-style: none;
-  padding-left: 50px;
+  padding-left: 100px;
 }
 
 nav ul li {
@@ -68,8 +249,8 @@ section {
 
 .Index__logo {
   position: absolute;
-  top: 100px;
-  left: 80px;
+  top: 2px;
+  left: 15px;
 }
 
 /* .Index__calendario {
@@ -79,7 +260,7 @@ section {
   /* grid-area: 1/1/5/3; posición en el grid */
   /* grid-template-columns: minmax(200px); */
   /* background-color: #020101;
-} */ */
+} */ 
 
 .Index__title {
   position: absolute;
@@ -220,7 +401,7 @@ footer div {
   /* grid-template-columns: 10px auto;
 
   grid-template-rows: 150px 150px;
-} */ */
+} */ 
 
 .Index__1SeccInf {
   grid-area: 1/4/3/5; /*posición en el grid!!!!!*/
