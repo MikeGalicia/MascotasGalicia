@@ -3,8 +3,8 @@ $(document).ready(main);
 var contador = 1;
 
 function main(){
-	$('.menu_bar').click(function(){
-		// $('nav').toggle(); 
+	$('.Barra__menu').click(function(){
+		//  $('nav').toggle(); 
 
 		if(contador == 1){
 			$('nav').animate({
@@ -14,7 +14,7 @@ function main(){
 		} else {
 			contador = 1;
 			$('nav').animate({
-				left: '-100%'
+				left: '-120%'
 			});
 		}
 

@@ -1,4 +1,6 @@
 @charset "UTF-8";
+/*Declaración de variables*/
+/*Inicio Configuraciones generales  para todas las páginas*/
 * {
   margin: 0;
   padding: 0;
@@ -7,13 +9,27 @@
 body {
   margin: 20px;
   padding: 0;
-  font-family: "Montserrat", sans-serif;
-  color: #fdfdfd;
-  background: #250869b2;
+  font: "Montserrat", sans-serif;
+  color: #fff;
+  /* background: $Naranjon; */
+  background-image: url("../img/Fondo.png");
+  background-size: contain;
+  background-attachment: fixed;
   padding-top: 50px;
   /* margen para que no lo cubra la barra de cabecera*/
 }
 
+section {
+  padding: 10px;
+  margin: 20px;
+  display: inline;
+}
+
+a:hover {
+  color: white;
+}
+
+/*Inicio barra de menú con responsive*/
 header {
   width: 100%;
   right: 0;
@@ -30,36 +46,38 @@ header nav {
   height: 80px;
 }
 
-.menu_bar {
-  display: none;
-}
-
 header nav ul {
+  margin: 0;
+  padding: 0;
+  font-family: "Grandstander", cursive;
   overflow: hidden;
   list-style: none;
+  padding-left: 100px;
 }
 
 header nav ul li {
-  float: left;
+  display: inline-block;
+  line-height: 80px;
 }
 
 header nav ul li a {
   color: #fff;
   display: block;
+  padding: 0 40px;
   text-decoration: none;
   padding-inline: 15px;
-}
-
-header nav ul li span {
-  margin-right: 10px;
 }
 
 header nav ul li a:hover {
   background: #ec731e;
 }
 
-section {
-  padding: 10px;
+header nav ul li span {
+  margin-right: 5px;
+}
+
+.Barra__menu {
+  display: none;
 }
 
 @media screen and (max-width: 1012px) {
@@ -70,17 +88,20 @@ section {
     margin: 0;
     position: fixed;
   }
+  header nav ul {
+    padding-left: 30px;
+  }
   header nav ul li {
     display: block;
     float: none;
     border-bottom: 1px solid rgba(255, 255, 255, 0.3);
   }
-  .menu_bar {
+  .Barra__menu {
     display: block;
     width: 100%;
     background: #ccc;
   }
-  .menu_bar .bt-menu {
+  .Barra__menu .bt-menu {
     display: block;
     padding: 15px;
     background: black;
@@ -92,11 +113,12 @@ section {
     -webkit-box-sizing: border-box;
     box-sizing: border-box;
   }
-  .menu_bar h1 {
-    font-size: 30px;
-    padding: 0px;
+  .Barra__menu .bt-menu section {
+    color: #ec731e;
+    padding-left: 90px;
+    font-weight: bold;
   }
-  .menu_bar span {
+  .Barra__menu span {
     float: right;
     font-size: 45px;
   }
@@ -108,36 +130,65 @@ section {
   }
 }
 
+.bt-menu {
+  padding: 0px;
+  font-weight: lighter;
+  font-size: 10px;
+}
+
+.Index__logo {
+  position: absolute;
+  top: 2px;
+  left: 15px;
+}
+
 @media screen and (max-width: 590px) {
   body {
     background: black;
   }
-  main {
+  .tarjeta__img {
     display: none;
   }
 }
 
-/* 
-  .menuPrincipal {
-    background: #333;
-    color: white;
-    height: 80px;
-  
-    width: 100%; /* que la barra de menús ocupen tooodo el ancho 
-    right: 0;
-    top: 0;
-    position: fixed; /* con esto lo fijamos!!
-    z-index: 2; /*Pa que esté arribita de todo :P
+@media screen and (max-width: 485px) {
+  section {
+    font-size: 15px;
+    margin: 0px;
+    padding: 0px;
   }
-  .menuPrincipal a {
-    color: white;
-  }
-   */
-/* Código para BEM en index*/
-a:hover {
-  color: white;
 }
 
+@media screen and (max-width: 335px) {
+  section {
+    font-size: 13px;
+    margin: 0px;
+    padding: 0px;
+  }
+  .Index__logo {
+    width: 40px;
+    top: 10px;
+  }
+  .Barra__menu .bt-menu section {
+    padding-left: 50px;
+  }
+  header nav ul {
+    padding-left: 30px;
+  }
+  header nav ul li a {
+    padding: 0px;
+    height: 50px;
+  }
+}
+
+.Pag__actual {
+  color: #ec731e;
+}
+
+/*fin atributos de barra de menú navegación y responsive*/
+/*Fin Configuraciones generales  para todas las páginas*/
+/* Inicio Código para Index*/
+/* Código para BEM en index*/
 .contenedor {
   max-width: 1000px;
   width: 90%;
@@ -160,6 +211,8 @@ a:hover {
 
 .tarjeta a:hover {
   background-color: #ec731e;
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2);
 }
 
 .tarjeta__img {
@@ -195,90 +248,20 @@ a:hover {
   bottom: -30px;
 }
 
+@media screen and (max-width: 590px) {
+  .tarjeta {
+    background-color: #250869b2;
+  }
+  .boton {
+    background-color: #ec731e;
+  }
+}
+
 /*fin de código para BEM en index*/
-/*
-   Propiedades del texto de barrita de navegación 
-   */
-nav {
-  float: center;
-}
-
-nav ul {
-  margin: 0;
-  padding: 0;
-  font-family: "Grandstander", cursive;
-  list-style: none;
-  padding-left: 100px;
-}
-
-nav ul li {
-  display: inline-block;
-  line-height: 80px;
-}
-
-nav ul li a {
-  display: block;
-  padding: 0 40px;
-  /*distancia entre los bloques*/
-  text-decoration: none;
-  /*quitar decoración (subrayado a enlaces)*/
-}
-
-nav ul li a:hover {
-  background: #f17005;
-}
-
 /*Propiedades de contenido index*/
-section {
-  margin: 20px;
-  display: inline;
-}
-
-.Index__logo {
-  position: absolute;
-  top: 2px;
-  left: 15px;
-}
-
-/* .Index__calendario {
-    /* position: absolute;
-    top: 240px;
-    margin: 0px; */
-/* grid-area: 1/1/5/3; posición en el grid */
-/* grid-template-columns: minmax(200px); */
-/* background-color: #020101;
-  } */
 .Index__title {
   position: absolute;
   top: 100px;
-}
-
-section article {
-  background-color: #05000063;
-  /* position: relative; */
-  top: 20px;
-  height: 200px;
-  padding: 30px;
-  /* 
-    width: 667px;
-    left: 230px;*/
-}
-
-.Index__InfAdicional {
-  background-color: #6b0303b2;
-  /* position: absolute; */
-  /* top: 530px;
-    left: 30px; */
-  -ms-grid-row: 5;
-  -ms-grid-row-span: 4;
-  -ms-grid-column: 1;
-  -ms-grid-column-span: 2;
-  grid-area: 5/1/9/3;
-  /*posición en el grid!!!!!*/
-  font-size: 0.6em;
-  /* width: 190px;
-    height: 150px;
-    padding: 10px; */
 }
 
 footer {
@@ -292,7 +275,8 @@ footer div {
   padding: 10px;
 }
 
-/*  flexbox */
+/* Fin Código para Index*/
+/*Inicio propiedades flexbox */
 .div__Reservas {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -377,7 +361,7 @@ footer div {
   padding: 20px;
   margin: 40px;
   color: #25086900;
-  font-size: 30px;
+  font-size: 20px;
   -webkit-transition: all 1.5s;
   transition: all 1.5s;
 }
@@ -439,37 +423,8 @@ footer div {
   padding: 1em;
 }
 
-/* Propiedades Grid!!! */
-/* .Index__grilla {
-    display: grid;
-    /* grid-template: repeat(8, 12.5%) / 150px 100px repeat(8, 10%);
-  
-    height: 70vh; */
-/* grid-template-columns: 10px auto;
-  
-    grid-template-rows: 150px 150px;
-  } */
-.Index__1SeccInf {
-  -ms-grid-row: 1;
-  -ms-grid-row-span: 2;
-  -ms-grid-column: 4;
-  -ms-grid-column-span: 1;
-  grid-area: 1/4/3/5;
-  /*posición en el grid!!!!!*/
-  /* align-self: center; */
-}
-
-.Index__2SeccInf {
-  -ms-grid-row: 5;
-  -ms-grid-row-span: 4;
-  -ms-grid-column: 4;
-  -ms-grid-column-span: 2;
-  grid-area: 5/4/9/6;
-  /*posición en el grid!!!!!*/
-  /* align-self: center; */
-}
-
-/*Propiedades de tabla!!*/
+/*Fin propiedades Flex en páginas*/
+/*Inicio Propiedades de tabla Baño*/
 table {
   font-family: arial, sans-serif;
   border-collapse: collapse;
@@ -496,6 +451,8 @@ tr:nth-child(even) {
   list-style-type: square;
 }
 
+/* Fin propiedades Tabla Baño*/
+/*Inicio Propiedades FAQ*/
 .card-header {
   background-color: rgba(0, 0, 0, 0.849);
 }
@@ -529,3 +486,10 @@ img {
   max-width: 100%;
   height: auto;
 }
+
+label {
+  margin-top: 5px;
+  margin-bottom: 0px;
+}
+
+/* Fin propiedades FAQ*/
