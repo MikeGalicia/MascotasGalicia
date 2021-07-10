@@ -1,3 +1,5 @@
+@import url(https://fonts.googleapis.com/css?family=Roboto:400,300,500);
+
 /*Declaración de variables*/
 // Colores
 $Moradon: #250869b2;
@@ -13,438 +15,477 @@ $Altura-bm: 80px;
 
 /*Inicio Configuraciones generales  para todas las páginas*/
 * {
-  margin: 0;
-  padding: 0;
-}
+    margin: 0;
+    padding: 0;
+    cursor: url("../img/cursor/c2.cur"), auto;
+    
+   }
 
 body {
-  margin: 20px;
+  margin: 0px;
   padding: 0;
   font: $Fuente-general;
   color: $Bk;
-  /* background: $Naranjon; */
   background-image: url("../img/Fondo.png");
   background-size: contain;
   background-attachment: fixed;
-  padding-top: 50px; /* margen para que no lo cubra la barra de cabecera*/
-}
-section {
-  padding: 10px;
-  margin: 20px;
-  display: inline;
+  padding-top: $Altura-bm; /* margen para que no lo cubra la barra de cabecera*/
+
 }
 
-a:hover {
-  color: white;
-}
 
 /*Inicio barra de menú con responsive*/
-header {
+@media screen and (max-width: 2000px) {
+nav {
   width: 100%;
   right: 0;
   top: 0;
   position: fixed;
   z-index: 2;
-
-  nav {
-    width: 100%;
-    max-width: 100%;
-    margin: 0px auto;
-    background: black;
-    height: $Altura-bm;
-    ul {
-      margin: 0;
-      padding: 0;
-      font-family: $Fuente-mbarra;
-      overflow: hidden;
-      list-style: none;
-      padding-left: 100px;
-
-      li {
-        display: inline-block;
-        line-height: $Altura-bm;
-        a {
-          color: #fff;
-          display: block;
-          padding: 0 40px;
-          text-decoration: none;
-          padding-inline: 15px;
-        }
-        a:hover {
-          background: $Naranjon;
-        }
-        span {
-          margin-right: 5px;
-        }
-      }
-    }
-  }
+  background: black;
+  height: 80px;
+  
+  
 }
-
-.Barra__menu {
-  display: none;
-}
-
-@media screen and (max-width: 1012px) {
-  header nav {
-    width: 80%;
-    height: 100%;
-    left: -100%;
-    margin: 0;
-    position: fixed;
-
-    ul {
-      padding-left: 30px;
-      li {
-        display: block;
-        float: none;
-        border-bottom: 1px solid rgba(255, 255, 255, 0.3);
-      }
-    }
-  }
-
-  .Barra__menu {
-    display: block;
-    width: 100%;
-    background: #ccc;
-
-    .bt-menu {
-      display: block;
-      padding: 15px;
-      background: black;
-      height: 80px;
-      color: #fff;
-      text-decoration: none;
-      font-weight: normal;
-      font-size: 25px;
-      -webkit-box-sizing: border-box;
-      -moz-box-sizing: border-box;
-      box-sizing: border-box;
-      section {
-        color: $Naranjon;
-        padding-left: 90px;
-        font-weight: bold;
-      }
-    }
-    span {
-      float: right;
-      font-size: 45px;
-    }
-  }
-
-  .section__titulo {
-    display: none;
-  }
-  .Index__logo--dis {
-    display: none;
-  }
-}
-
-.bt-menu {
-  padding: 0px;
-  font-weight: lighter;
-  font-size: 10px;
-}
-
-.Index__logo {
-  position: absolute;
-  top: 2px;
-  left: 15px;
-}
-
-
-@media screen and (max-width: 590px) {
-  body {
-    background: black;
-  }
-  .tarjeta__img {
-    display: none;
-  }
-}
-
-@media screen and (max-width: 485px) {
-section {
-  font-size: 15px;
-  margin: 0px;
-  padding: 0px;
-}
-}
-@media screen and (max-width: 335px) {
-section {
-  font-size: 13px;
-  margin: 0px;
-  padding: 0px;
-}
-.Index__logo {
-  width: 40px;
-  top: 10px;
-  }
-  .Barra__menu {
-    .bt-menu{
-      section {
-        padding-left: 50px;
-      }
-    }
-  }
-  header nav ul {
-padding-left: 30px;
-    li a {
-      padding: 0px;
-      height: 50px;
-  } 
-  }
-}
-
-
-
-
-.Pag__actual {
-  color: $Naranjon;
-}
-/*fin atributos de barra de menú navegación y responsive*/
-
-/*Fin Configuraciones generales  para todas las páginas*/
-
-/* Inicio Código para Index*/
-/* Código para BEM en index*/
-
-.contenedor {
-  max-width: 1000px;
-  width: 90%;
-  margin: 0 auto;
-}
-
-.tarjeta {
-  background-color: rgba(0, 0, 0, 0.425);
-  border-radius: 25px;
-  padding: 20px;
-  display: flex;
-  align-items: center;
-  position: relative;
-  margin-top: 50px;
-  a:hover {
-    background-color: $Naranjon;
-    transform: scale(1.2);
-  }
-}
-
-.tarjeta__img {
-  width: 300px;
-  height: 180px;
-  border-radius: 15px;
-  margin-right: 30px;
-}
-
-.tarjeta__titulo {
-  font-size: 1.5rem;
-  margin-bottom: 20px;
-}
-
-.tarjeta__parrafo {
-  line-height: 28px;
-  font-size: 1rem;
-}
-
-.boton {
-  height: 50px;
-  padding: 10px;
-  border-radius: 20px;
-  background-color: black;
-  color: white;
+a {
   display: inline-block;
+  margin: 0px;
+  margin-top: 0px;
+  justify-content: center;
+  text-align: center;
+  color: white;
+  height: 100%;
   text-decoration: none;
-  &--derecha {
-    position: absolute;
-    right: 20px;
-    bottom: -30px;
-  }
+  padding: 0 6px;
+  padding-top: 25px;
+}
+a:hover { background: #ec731e;
+  text-decoration: none;
+  color: white;
+cursor: pointer;
+}
+  
+  a:active { background: #ec741ea1;
+  text-decoration: none;
+  color: #250869b2; }
+
 }
 
-@media screen and (max-width: 590px) {
-  .tarjeta {
-    background-color: $Moradon;
-  }
-  .boton {
-    background-color: $Naranjon;
-  }
-}
-/*fin de código para BEM en index*/
+@media screen and (max-width: 800px) {
 
-/*Propiedades de contenido index*/
+    body {
+        padding-top: 10px;
+    }
 
-.Index__title {
-  position: absolute;
-  top: 100px;
-}
-
-footer {
-  width: 70px;
+nav {
+  
+  left: 0;
+  top: 0;
   position: fixed;
-  bottom: 10px;
-  right: 20px;
-
-  div {
-    padding: 10px;
-  }
+height: 450px;
+  z-index: 2;
+  width: 200px;
+  background: black;
+  color: white;
+  -webkit-clip-path: circle(24px at 30px 24px);
+  clip-path: circle(24px at 32px 24px);
+  -webkit-transition: -webkit-clip-path 0.5625s, clip-path 0.375s;
+  transition: -webkit-clip-path 0.5625s, clip-path 0.375s;
 }
 
-/* Fin Código para Index*/
-
-/*Inicio propiedades flexbox */
-.div__Reservas {
-  display: flex;
-  height: 600px;
-  flex-direction: column;
-  flex-wrap: wrap;
-  align-content: center;
-  justify-content: top;
-  padding: 20px;
-  margin: 40px;
-}
-.div__Paseos {
-  display: flex;
-  height: 600px;
-  flex-direction: row;
-  flex-wrap: wrap;
-  align-content: center;
-  justify-content: center;
-  padding: 20px;
-  margin: 40px;
-
-  iframe {
-    padding: 10px;
-  }
+nav:hover {
+  -webkit-transition-timing-function: ease-out;
+  transition-timing-function: ease-out;
+  -webkit-transition-duration: 0.75s;
+  transition-duration: 0.75s;
+  -webkit-clip-path: circle(390px at 225px 24px);
+  clip-path: circle(590px at 150px 24px);
 }
 
-.div__Baño {
-  display: flex;
-  height: 600px;
-  flex-direction: row;
-  flex-wrap: wrap;
-  align-content: center;
-  justify-content: center;
-  padding: 20px;
-  margin: 40px;
-  margin-top: 135px;
-}
-
-.section__Conoc {
-  display: flex;
-  height: 300px;
-  flex-direction: row;
-  flex-wrap: wrap;
-  align-content: center;
-  justify-content: center;
-  padding: 20px;
-  margin: 40px;
-  color: #25086900;
-  font-size: 20px;
-  transition: all 1.5s;
-  &:hover {
-    color: white;
-    background: rgb(255, 255, 254);
-    background: radial-gradient(
-      circle,
-      rgba(255, 255, 254, 0.267) 0%,
-      rgba(121, 37, 9, 0.377) 88%,
-      rgba(155, 66, 7, 0.267) 95%,
-      rgba(255, 149, 0, 0.171) 100%
-    );
-    transform: scale(0.8) rotate(5deg) translateX(100px) translateY(200px);
-    border-radius: 0%;
-    box-shadow: 0px 0px 15px 15px #ec731e;
-  }
-}
-
-.div__FAQ {
-  display: flex;
-  height: 600px;
-  flex-direction: column;
-  padding: 1em;
-}
-.div__Ingresa {
-  display: flex;
-  height: 600px;
-  flex-direction: row;
-  align-content: center;
-  justify-content: center;
-  padding: 1em;
-}
-.div__Registro {
-  display: flex;
-  height: 600px;
-  flex-direction: row;
-  align-content: center;
-  justify-content: center;
-  padding: 1em;
-}
-/*Fin propiedades Flex en páginas*/
-
-/*Inicio Propiedades de tabla Baño*/
-table {
-  font-family: arial, sans-serif;
-  border-collapse: collapse;
-  width: 100%;
-}
-
-td,
-th {
-  border: 1px solid #dddddd;
-  text-align: left;
-  padding: 30px;
-}
-
-th {
-  text-align: center;
-  background-color: #f16f0594;
-}
-
-tr:nth-child(even) {
-  background-color: #dddddd3b;
-}
-
-.Baño__TableUl {
-  list-style-type: square;
-}
-/* Fin propiedades Tabla Baño*/
-
-/*Inicio Propiedades FAQ*/
-.card-header {
-  background-color: rgba(0, 0, 0, 0.849);
-
-  a {
-    color: white;
-  }
-}
-
-.card-body {
-  background-color: #f17005;
-}
-
-h1 {
-  font-size: 2.3em;
-  line-height: 1.3em;
-  margin: 15px 0;
-  text-align: center;
-  color: #f17005;
-}
-
-form {
-  margin: 50px;
-  text-align: center;
-}
-
-p {
-  margin: 0 0 1.5em 0;
-}
-
-img {
-  max-width: 100%;
+a {
+  display: block;
+  line-height: 50px;
+  padding: 0 20px;
+  color: inherit;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  text-decoration: none;
+  margin: 0px;
   height: auto;
 }
 
-label {
-  margin-top: 5px;
-  margin-bottom: 0px;
+a:hover { background: #ec731e;
+text-decoration: none;
+color: white;}
+
+a:active { background: #ec741ea1;
+text-decoration: none;
+color: #250869b2; }
+
+.span__logo {
+  position: fixed;
+  margin-left: 70px;
+  margin-top: -15px;
+  }
+
+.Index__logo {
+    width: 35px;
 }
-/* Fin propiedades FAQ*/
+
+.navicon {
+  padding: 23px 22px;
+  cursor: pointer;
+  -webkit-transform-origin: 32px 24px;
+  -ms-transform-origin: 32px 24px;
+  transform-origin: 32px 24px;
+
+  div {
+      position: relative;
+      margin-left: 22px;
+      margin-top: 1px;
+      width: 20px;
+      height: 2px;
+      background: white;
+
+  }
+}
+
+.navicon div:before,
+.navicon div:after {
+  display: block;
+  content: "";
+  width: 20px;
+  height: 2px;
+  background: white;
+  position: absolute;
+}
+
+.navicon div:before { top: -7px; }
+
+.navicon div:after { top: 7px; }
+}
+
+//* Responsive pag general *//
+
+@media screen and (max-width: 590px) {
+    body {
+      background: black;
+    }
+    .tarjeta__img {
+      display: none;
+    }
+  }
+
+  @media screen and (max-width: 485px) {
+    section {
+      font-size: 15px;
+      margin: 0px;
+      padding: 0px;
+    }
+    }
+    @media screen and (max-width: 335px) {
+    section {
+      font-size: 13px;
+      margin: 0px;
+      padding: 0px;
+    }
+
+}
+
+/*fin atributos de barra de menú navegación y responsive*/
+.Pag__actual {
+    color: $Naranjon;
+  }
+
+  /*Fin Configuraciones generales  para todas las páginas*/
+
+
+  /* Inicio Código para Index*/
+/* Código para BEM en index*/
+
+.contenedor {
+    max-width: 1000px;
+    width: 90%;
+    margin: 0 auto;
+  }
+  
+  .tarjeta {
+    background-color: rgba(0, 0, 0, 0.425);
+    border-radius: 25px;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    position: relative;
+    margin-top: 50px;
+    a:hover {
+      background-color: $Naranjon;
+      transform: scale(1.2);
+    }
+  }
+  
+  .tarjeta__img {
+    width: 300px;
+    height: 180px;
+    border-radius: 15px;
+    margin-right: 30px;
+  }
+  
+  .tarjeta__titulo {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+  }
+  
+  .tarjeta__parrafo {
+    line-height: 28px;
+    font-size: 1rem;
+  }
+  
+  .boton {
+    height: 50px;
+    padding: 10px;
+    border-radius: 20px;
+    background-color: black;
+    color: white;
+    display: inline-block;
+    text-decoration: none;
+    &--derecha {
+      position: absolute;
+      right: 20px;
+      bottom: -30px;
+    }
+  }
+  
+  @media screen and (max-width: 590px) {
+    .tarjeta {
+      background-color: $Moradon;
+    }
+    .boton {
+      background-color: $Naranjon;
+    }
+  }
+  /*fin de código para BEM en index*/
+  
+  /*Propiedades de contenido index*/
+
+  .Index__title {
+    position: absolute;
+    top: 100px;
+  }
+  
+  footer {
+    width: 70px;
+    position: fixed;
+    bottom: 10px;
+    right: 20px;
+  
+    div {
+      padding: 10px;
+    }
+  }
+  
+  /* Fin Código para Index*/
+
+  /*Inicio propiedades flexbox */
+.div__Reservas {
+    display: flex;
+    height: 600px;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: top;
+    padding: 20px;
+    margin: 40px;
+  }
+  .div__Paseos {
+    display: flex;
+    height: 600px;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: center;
+    padding: 20px;
+    margin: 40px;
+  
+    iframe {
+      padding: 10px;
+    }
+  }
+  
+  .div__Baño {
+    display: flex;
+    height: 600px;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: center;
+    padding: 20px;
+    margin: 40px;
+    margin-top: 135px;
+  }
+  
+  .section__Conoc {
+    display: flex;
+    height: 300px;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: center;
+    padding: 20px;
+    margin: 40px;
+    color: #25086900;
+    font-size: 20px;
+    transition: all 1.5s;
+    &:hover {
+      color: white;
+      background: rgb(255, 255, 254);
+      background: radial-gradient(
+        circle,
+        rgba(255, 255, 254, 0.267) 0%,
+        rgba(121, 37, 9, 0.377) 88%,
+        rgba(155, 66, 7, 0.267) 95%,
+        rgba(255, 149, 0, 0.171) 100%
+      );
+      transform: scale(0.8) rotate(5deg) translateX(100px) translateY(200px);
+      border-radius: 0%;
+      box-shadow: 0px 0px 15px 15px #ec731e;
+    }
+  }
+  
+  .div__FAQ {
+    display: flex;
+    height: 600px;
+    flex-direction: column;
+    padding: 1em;
+  }
+  .div__Ingresa {
+    display: flex;
+    height: 600px;
+    flex-direction: row;
+    align-content: center;
+    justify-content: center;
+    padding: 1em;
+  }
+  .div__Registro {
+    display: flex;
+    height: 600px;
+    flex-direction: row;
+    align-content: center;
+    justify-content: center;
+    padding: 1em;
+  }
+  /*Fin propiedades Flex en páginas*/
+  
+  /*Inicio Propiedades de tabla Baño*/
+  table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+  }
+  
+  td,
+  th {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 30px;
+  }
+  
+  th {
+    text-align: center;
+    background-color: #f16f0594;
+  }
+  
+  tr:nth-child(even) {
+    background-color: #dddddd3b;
+  }
+  
+  .Baño__TableUl {
+    list-style-type: square;
+  }
+
+
+/* Inicio Responsive tabla baño*/
+  @media screen and (max-width: 1400px) {
+table {
+
+    margin-top: $Altura-bm;
+}
+
+  }
+
+  @media screen and (max-width: 1200px) {
+    table {
+    
+        margin-top: 4*$Altura-bm;
+    }
+    
+      }
+
+      @media screen and (max-width: 667px) {
+        table {
+            margin-top: $Altura-bm +60px;
+        }
+
+        td,
+        th {
+
+          padding: 5px;
+        }
+        
+          }
+          @media screen and (max-width: 440px) {
+              table {
+                  margin-top: 0px;
+                  font-size: 80%;
+            } 
+          }
+
+/* Fin Responsive tabla baño*/
+
+
+
+
+  /* Fin propiedades Tabla Baño*/
+  
+  /*Inicio Propiedades FAQ*/
+  .card-header {
+    background-color: rgba(0, 0, 0, 0.849);
+  
+    a {
+      color: white;
+    }
+  }
+  
+  .card-body {
+    background-color: #f17005;
+  }
+  
+  h1 {
+    font-size: 2.3em;
+    line-height: 1.3em;
+    margin: 15px 0;
+    text-align: center;
+    color: #f17005;
+  }
+  
+  form {
+    margin: 50px;
+    text-align: center;
+  }
+  
+  p {
+    margin: 0 0 1.5em 0;
+  }
+  
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+  
+  label {
+    margin-top: 5px;
+    margin-bottom: 0px;
+  }
+  /* Fin propiedades FAQ*/

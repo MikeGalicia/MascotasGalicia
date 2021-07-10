@@ -1,145 +1,150 @@
 @charset "UTF-8";
+@import url(https://fonts.googleapis.com/css?family=Roboto:400,300,500);
 /*Declaración de variables*/
 /*Inicio Configuraciones generales  para todas las páginas*/
 * {
   margin: 0;
   padding: 0;
+  cursor: url("../img/cursor/c2.cur"), auto;
 }
 
 body {
-  margin: 20px;
+  margin: 0px;
   padding: 0;
   font: "Montserrat", sans-serif;
   color: #fff;
-  /* background: $Naranjon; */
   background-image: url("../img/Fondo.png");
   background-size: contain;
   background-attachment: fixed;
-  padding-top: 50px;
+  padding-top: 80px;
   /* margen para que no lo cubra la barra de cabecera*/
 }
 
-section {
-  padding: 10px;
-  margin: 20px;
-  display: inline;
-}
-
-a:hover {
-  color: white;
-}
-
 /*Inicio barra de menú con responsive*/
-header {
-  width: 100%;
-  right: 0;
-  top: 0;
-  position: fixed;
-  z-index: 2;
-}
-
-header nav {
-  width: 100%;
-  max-width: 100%;
-  margin: 0px auto;
-  background: black;
-  height: 80px;
-}
-
-header nav ul {
-  margin: 0;
-  padding: 0;
-  font-family: "Grandstander", cursive;
-  overflow: hidden;
-  list-style: none;
-  padding-left: 100px;
-}
-
-header nav ul li {
-  display: inline-block;
-  line-height: 80px;
-}
-
-header nav ul li a {
-  color: #fff;
-  display: block;
-  padding: 0 40px;
-  text-decoration: none;
-  padding-inline: 15px;
-}
-
-header nav ul li a:hover {
-  background: #ec731e;
-}
-
-header nav ul li span {
-  margin-right: 5px;
-}
-
-.Barra__menu {
-  display: none;
-}
-
-@media screen and (max-width: 1012px) {
-  header nav {
-    width: 80%;
-    height: 100%;
-    left: -100%;
-    margin: 0;
-    position: fixed;
-  }
-  header nav ul {
-    padding-left: 30px;
-  }
-  header nav ul li {
-    display: block;
-    float: none;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.3);
-  }
-  .Barra__menu {
-    display: block;
+@media screen and (max-width: 2000px) {
+  nav {
     width: 100%;
-    background: #ccc;
-  }
-  .Barra__menu .bt-menu {
-    display: block;
-    padding: 15px;
+    right: 0;
+    top: 0;
+    position: fixed;
+    z-index: 2;
     background: black;
     height: 80px;
-    color: #fff;
+  }
+  a {
+    display: inline-block;
+    margin: 0px;
+    margin-top: 0px;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    text-align: center;
+    color: white;
+    height: 100%;
     text-decoration: none;
-    font-weight: normal;
-    font-size: 25px;
-    -webkit-box-sizing: border-box;
-    box-sizing: border-box;
+    padding: 0 6px;
+    padding-top: 25px;
   }
-  .Barra__menu .bt-menu section {
-    color: #ec731e;
-    padding-left: 90px;
-    font-weight: bold;
+  a:hover {
+    background: #ec731e;
+    text-decoration: none;
+    color: white;
+    cursor: pointer;
   }
-  .Barra__menu span {
-    float: right;
-    font-size: 45px;
-  }
-  .section__titulo {
-    display: none;
-  }
-  .Index__logo--dis {
-    display: none;
+  a:active {
+    background: #ec741ea1;
+    text-decoration: none;
+    color: #250869b2;
   }
 }
 
-.bt-menu {
-  padding: 0px;
-  font-weight: lighter;
-  font-size: 10px;
-}
-
-.Index__logo {
-  position: absolute;
-  top: 2px;
-  left: 15px;
+@media screen and (max-width: 800px) {
+  body {
+    padding-top: 10px;
+  }
+  nav {
+    left: 0;
+    top: 0;
+    position: fixed;
+    height: 450px;
+    z-index: 2;
+    width: 200px;
+    background: black;
+    color: white;
+    -webkit-clip-path: circle(24px at 30px 24px);
+    clip-path: circle(24px at 32px 24px);
+    -webkit-transition: -webkit-clip-path 0.5625s, clip-path 0.375s;
+    transition: -webkit-clip-path 0.5625s, clip-path 0.375s;
+  }
+  nav:hover {
+    -webkit-transition-timing-function: ease-out;
+    transition-timing-function: ease-out;
+    -webkit-transition-duration: 0.75s;
+    transition-duration: 0.75s;
+    -webkit-clip-path: circle(390px at 225px 24px);
+    clip-path: circle(590px at 150px 24px);
+  }
+  a {
+    display: block;
+    line-height: 50px;
+    padding: 0 20px;
+    color: inherit;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    text-decoration: none;
+    margin: 0px;
+    height: auto;
+  }
+  a:hover {
+    background: #ec731e;
+    text-decoration: none;
+    color: white;
+  }
+  a:active {
+    background: #ec741ea1;
+    text-decoration: none;
+    color: #250869b2;
+  }
+  .span__logo {
+    position: fixed;
+    margin-left: 70px;
+    margin-top: -15px;
+  }
+  .Index__logo {
+    width: 35px;
+  }
+  .navicon {
+    padding: 23px 22px;
+    cursor: pointer;
+    -webkit-transform-origin: 32px 24px;
+    transform-origin: 32px 24px;
+  }
+  .navicon div {
+    position: relative;
+    margin-left: 22px;
+    margin-top: 1px;
+    width: 20px;
+    height: 2px;
+    background: white;
+  }
+  .navicon div:before,
+  .navicon div:after {
+    display: block;
+    content: "";
+    width: 20px;
+    height: 2px;
+    background: white;
+    position: absolute;
+  }
+  .navicon div:before {
+    top: -7px;
+  }
+  .navicon div:after {
+    top: 7px;
+  }
 }
 
 @media screen and (max-width: 590px) {
@@ -165,27 +170,13 @@ header nav ul li span {
     margin: 0px;
     padding: 0px;
   }
-  .Index__logo {
-    width: 40px;
-    top: 10px;
-  }
-  .Barra__menu .bt-menu section {
-    padding-left: 50px;
-  }
-  header nav ul {
-    padding-left: 30px;
-  }
-  header nav ul li a {
-    padding: 0px;
-    height: 50px;
-  }
 }
 
+/*fin atributos de barra de menú navegación y responsive*/
 .Pag__actual {
   color: #ec731e;
 }
 
-/*fin atributos de barra de menú navegación y responsive*/
 /*Fin Configuraciones generales  para todas las páginas*/
 /* Inicio Código para Index*/
 /* Código para BEM en index*/
@@ -451,6 +442,37 @@ tr:nth-child(even) {
   list-style-type: square;
 }
 
+/* Inicio Responsive tabla baño*/
+@media screen and (max-width: 1400px) {
+  table {
+    margin-top: 80px;
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  table {
+    margin-top: 320px;
+  }
+}
+
+@media screen and (max-width: 667px) {
+  table {
+    margin-top: 140px;
+  }
+  td,
+  th {
+    padding: 5px;
+  }
+}
+
+@media screen and (max-width: 440px) {
+  table {
+    margin-top: 0px;
+    font-size: 80%;
+  }
+}
+
+/* Fin Responsive tabla baño*/
 /* Fin propiedades Tabla Baño*/
 /*Inicio Propiedades FAQ*/
 .card-header {
